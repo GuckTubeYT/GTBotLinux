@@ -746,7 +746,7 @@ public:
 
 	BYTE* GetExtendedDataPointerFromTankPacket(BYTE* a1)
 	{
-		return (BYTE*)(/*(*(int *)(a1 + 12) << 28 >> 31) & */(int)(a1 + 56));
+		return (BYTE*)((intptr_t)(a1 + 56));
 	}
 
 	/*void AtSetTile(int x, int y, int itemId)
