@@ -1,6 +1,8 @@
 # GTBotLinux
 A GrowtopiaBot can run on Linux, Credit = DrOreo002 and GrowtopiaNoobs<br />
 i just make support linux
+# Warning
+GTBotLinux is still experiment, if you get error, dont forget to screenshot and post to issue
 # Build
 If you use Termux, please use termux.sh<br />
 To run = bash termux.sh<br />
