@@ -55,7 +55,7 @@
 
 #ifndef HAS_SOCKLEN_T
 #ifndef __socklen_t_defined
-typedef int socklen_t;
+//typedef int socklen_t;
 //typedef unsigned long socklen_t
 #endif
 #endif
