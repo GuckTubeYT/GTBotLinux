@@ -8,3 +8,5 @@ If you use Linux, please use linux.sh<br />
 To run = bash linux.sh<br />
 If you already install dependencies (build-essential)<br />
 To compile the source code = bash build.sh
+# Join
+Join my Discord Group = https://bit.ly/guckproject
