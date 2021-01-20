@@ -10,5 +10,8 @@ If you use Linux, please use linux.sh<br />
 To run = bash linux.sh<br />
 If you already install dependencies (build-essential)<br />
 To compile the source code = bash build.sh
+# Setting
+Just edit the config.json<br />
+To edit = nano config.json
 # Join
 Join my Discord Group = https://bit.ly/guckproject
