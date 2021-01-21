@@ -21,8 +21,15 @@ int main() {
 	json j;
 	i >> j;
 	init();
+	system("clear");
 	cout << "GrowtopiaBot v1.0 [Not included QT]! by GrowtopiaNoobs and DrOreo002" << endl;
-
+	
+	if (j["ip"] == "Ip Target")
+	{
+		cout << "Please change the \"Ip Target\" to ip gtps on config.json" << endl;
+		return 0;
+	}
+	
 	GrowtopiaBot bot = {
 		j["username"], j["password"], j["ip"], j["port"]
 	};
