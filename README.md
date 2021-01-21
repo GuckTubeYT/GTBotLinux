@@ -17,7 +17,8 @@ Termux<br />
 3. cd GTBotLinux
 4. bash termux.sh
 5. dont forget to edit config.json, Command = nano config.json
-6. ./gtbot<br />
+6. ./gtbot
+
 Linux<br />
 1. sudo apt install git nano
 2. git clone https://github.com/GuckTubeYT/GTBotLinux
