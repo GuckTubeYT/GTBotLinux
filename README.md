@@ -12,20 +12,22 @@ To run = bash linux.sh<br />
 If you already install dependencies (build-essential)<br />
 To compile the source code = bash build.sh-->
 Termux<br />
-1. pkg install git nano
-2. git clone https://github.com/GuckTubeYT/GTBotLinux
-3. cd GTBotLinux
-4. bash termux.sh
-5. dont forget to edit config.json, Command = nano config.json
-6. ./gtbot
+1. pkg update -y && pkg upgrade -y
+2. pkg install git nano
+3. git clone https://github.com/GuckTubeYT/GTBotLinux
+4. cd GTBotLinux
+5. bash termux.sh
+6. dont forget to edit config.json, Command = nano config.json
+7. ./gtbot
 
 Linux<br />
-1. sudo apt install git nano
-2. git clone https://github.com/GuckTubeYT/GTBotLinux
-3. cd GTBotLinux
-4. bash linux.sh
-5. dont forget to edit config.json, Command = nano config.json
-6. ./gtbot
+1. sudo apt update -y && sudo apt upgrade -y
+2. sudo apt install git nano
+3. git clone https://github.com/GuckTubeYT/GTBotLinux
+4. cd GTBotLinux
+5. bash linux.sh
+6. dont forget to edit config.json, Command = nano config.json
+7. ./gtbot
 # Setting
 Just edit the config.json<br />
 To edit = nano config.json
