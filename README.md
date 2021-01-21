@@ -1,8 +1,6 @@
 # GTBotLinux
 A GrowtopiaBot can run on Linux, Credit = DrOreo002 and GrowtopiaNoobs<br />
 i just make support linux
-# Warning
-GTBotLinux is still experiment, if you get error, dont forget to screenshot and post to issue
 # How to build
 <!---
 If you use Termux, please use termux.sh<br />
@@ -26,6 +24,8 @@ Linux<br />
 4. bash linux.sh
 5. dont forget to edit config.json, Command = nano config.json
 6. ./gtbot
+# Warning
+GTBotLinux is still experiment, if you get error, dont forget to screenshot and post to issue<br />
 # Setting
 Just edit the config.json<br />
 To edit = nano config.json
