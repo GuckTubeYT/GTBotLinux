@@ -1,5 +1,5 @@
 # GTBotLinux
-A GrowtopiaBot can run on Linux, Credit = DrOreo002 and GrowtopiaNoobs<br />
+A GrowtopiaBot can run on Linux, GrowtopiaBot Made by DrOreo002 and GrowtopiaNoobs<br />
 i just make support linux
 # Warning
 GTBotLinux is still experiment, if you get error, dont forget to screenshot and post to issue<br />
