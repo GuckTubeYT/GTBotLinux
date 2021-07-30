@@ -1,7 +1,7 @@
 # GTBotLinux
 A GrowtopiaBot can run on Linux, GrowtopiaBot Made by DrOreo002 and GrowtopiaNoobs<br />
 i just make support linux<br />
-Update = Now GTBOT Support login to real gt (thanks to atipls)
+Update = Now gtbot Support login to real gt (thanks to atipls)
 # Warning
 GTBotLinux is still experiment, if you get error, dont forget to screenshot and post to issue<br />
 # How to build
