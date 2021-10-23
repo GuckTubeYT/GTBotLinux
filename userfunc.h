@@ -195,59 +195,61 @@ void GrowtopiaBot::OnRemove(string data) // "netID|x\n"
 	//SendPacket(2, "action|input\n|text|Bye bye ::((", peer);
 }
 
-void GrowtopiaBot::OnSpawn(string data)
-{
+void GrowtopiaBot::OnSpawn(string data){
 	std::stringstream ss(data.c_str());
 	std::string to;
 	cout << data;
-	ObjectData objectData;
 	bool actuallyOwner = false;
-
+	
 	while (std::getline(ss, to, '\n')) {
 		string id = to.substr(0, to.find("|"));
 		string act = to.substr(to.find("|") + 1, to.length() - to.find("|") - 1);
 		if (id == "country")
 		{
-			objectData.country = act;
+			player.country = act;
 		}
 		else if (id == "name")
 		{
-			if (stripMessage(act) == ownerUsername) actuallyOwner = true;
-			objectData.name = act;
+			player.name = act;
+			player.name = (player.name).substr(2, (player.name).size() - 4);
+			if (player.name == name)
+			{
+				posAtPlayers = world->players.size();
+			}
 		}
 		else if (id == "netID")
 		{
-			if (actuallyOwner) owner = atoi(act.c_str());
-			objectData.netId = atoi(act.c_str());
-		}
-		else if (id == "userID")
-		{
-			objectData.userId = atoi(act.c_str());
+			player.netID = atoi(act.c_str());
 		}
 		else if (id == "posXY")
 		{
 			int x = atoi(act.substr(0, to.find("|")).c_str());
 			int y = atoi(act.substr(act.find("|") + 1, act.length() - act.find("|") - 1).c_str());
-			objectData.x = x;
-			objectData.y = y;
-		}
-		else if (id == "type")
-		{
-			if (act == "local")
-				objectData.isLocal = true;
+			player.x = x;
+			player.y = y;
 		}
 		else if (act != "0" && (id == "invis" || id == "mstate" || id == "smstate"))
 		{
-			cout << "Some fishy boy is here: " << objectData.name << "; " << objectData.country << "; " << objectData.userId << "; " << objectData.netId << "; " << endl;
-			objectData.isMod = true;
+			cout << "FKKIND MOD IS HERE!: " << player.name << "; " << player.country << "; " << player.netID << "; " << endl;
+			exit(-10);
+		}
+		else {
+			print(id + "!!!!!!!!!!!" + act);
+		}
+		if (player.name == ownerName)
+		{
+			print("Found owner netId is " + to_string(player.netID));
+			ownerNetID = player.netID;
 		}
 	}
-
-	if (actuallyOwner) cout << "Owner netID has been updated to " << objectData.netId << " username is " << ownerUsername;
-	objects.push_back(objectData);
-	//SendPacket(2, "action|input\n|text|`3Hello " + name + " `3with id " + netid + " from " + country + "! Your Growtopia ID is "+uid, peer);
+	if (player.name == name)
+	{
+		x = player.x;
+		y = player.y;
+		netID = player.netID;
+	}
+	world->players.push_back(player);
 }
-
 void GrowtopiaBot::OnAction(string command)
 {
 	//SendPacket(2, "action|input\n|text|Why do you "+command.substr(1, command.length())+"?", peer);
